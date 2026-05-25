@@ -1,14 +1,9 @@
-/* ===== AUTHENTIK GLASSMORPHISM THEME ===== */
+/* ===== AUTHENTIK GLASSMORPHISM THEME - V1.1 (Badge Fix) ===== */
+
 /* 
-   Fork by karubits — https://github.com/karubits
-   Based on VULGA01/Authentik-Login-theme-Glassmorphism
-   https://github.com/VULGA01/Authentik-Login-theme-Glassmorphism
-
-   Reworked for Authentik's Shadow DOM architecture (adoptedStyleSheets).
-   Confirmed working on Authentik 2026.2.x and 2026.5.x.
-
    This theme implements a modern glassmorphism look for Authentik.
    It overrides standard PatternFly and Authentik components.
+   Please upload this file in the Authentik Admin Interface -> Customization -> Blueprints/Files.
 */
 
 /* ===== EASY CUSTOMIZATION ===== */
@@ -1202,19 +1197,32 @@ ak-loading-overlay {
 /* User Settings Tabs - Shadow DOM */
 :host(ak-user-settings) .pf-c-tabs,
 :host(ak-user-settings) .pf-c-tabs__list {
-    background: transparent !important;
-    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(20px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 8px !important;
 }
 
 :host(ak-user-settings) .pf-c-tabs__button {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500 !important;
+    padding: 10px 16px !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+}
+
+:host(ak-user-settings) .pf-c-tabs__button:hover {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 :host(ak-user-settings) .pf-c-tabs__link.pf-m-current,
 :host(ak-user-settings) .pf-c-tabs__item.pf-m-current .pf-c-tabs__button {
     color: white !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 10px 10px 0 0 !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 10px !important;
 }
 
 :host(ak-user-settings) .pf-c-tabs__item.pf-m-current::after {
