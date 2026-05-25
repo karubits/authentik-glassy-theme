@@ -11,16 +11,16 @@ Reworked for Authentik's Shadow DOM architecture (`adoptedStyleSheets`).
 ## What it looks like
 
 ### Login
-![Login page](example2.png)
+![Login page](img/example2.png)
 
 ### MFA prompt
-![MFA page](example3.png)
+![MFA page](img/example3.png)
 
 ### App dashboard
-![App dashboard](example1.png)
+![App dashboard](img/example1.png)
 
 ### User settings
-![User settings](example4.png)
+![User settings](img/example4.png)
 
 ## Prerequisites
 
@@ -120,6 +120,17 @@ Key points:
   app dashboard.
 - Admin interface styles are excluded via
   `:host(ak-interface-admin)` resets.
+
+## Contributing
+
+Found a bug or have a fix for a new Authentik version? Contributions are welcome.
+
+- **Issues:** [github.com/karubits/authentik-glassy-theme/issues](https://github.com/karubits/authentik-glassy-theme/issues)
+- **Pull requests:** [github.com/karubits/authentik-glassy-theme/pulls](https://github.com/karubits/authentik-glassy-theme/pulls)
+
+## License
+
+[MIT](LICENSE) - free to use, modify, and distribute.
 
 ## Credits
 
