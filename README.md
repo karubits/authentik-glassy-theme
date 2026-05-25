@@ -19,6 +19,9 @@ Reworked for Authentik's Shadow DOM architecture (`adoptedStyleSheets`).
 ### App dashboard
 ![App dashboard](example1.png)
 
+### User settings
+![User settings](example4.png)
+
 ## Prerequisites
 
 1. A background image uploaded to Authentik as a **public media file**
