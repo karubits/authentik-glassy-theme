@@ -1195,8 +1195,8 @@ ak-loading-overlay {
 }
 
 /* User Settings Tabs - Shadow DOM */
-:host(ak-user-settings) .pf-c-tabs,
-:host(ak-user-settings) .pf-c-tabs__list {
+/* Tabs live inside ak-tabs shadow root; use bare selectors since CSS is adopted there */
+.pf-c-tabs.pf-m-vertical {
     background: rgba(0, 0, 0, 0.4) !important;
     backdrop-filter: blur(20px) saturate(120%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
@@ -1205,7 +1205,11 @@ ak-loading-overlay {
     padding: 8px !important;
 }
 
-:host(ak-user-settings) .pf-c-tabs__button {
+.pf-c-tabs.pf-m-vertical .pf-c-tabs__list {
+    background: transparent !important;
+}
+
+.pf-c-tabs.pf-m-vertical .pf-c-tabs__link {
     color: rgba(255, 255, 255, 0.8) !important;
     font-weight: 500 !important;
     padding: 10px 16px !important;
@@ -1213,21 +1217,15 @@ ak-loading-overlay {
     transition: all 0.2s ease !important;
 }
 
-:host(ak-user-settings) .pf-c-tabs__button:hover {
+.pf-c-tabs.pf-m-vertical .pf-c-tabs__link:hover {
     color: white !important;
     background: rgba(255, 255, 255, 0.08) !important;
 }
 
-:host(ak-user-settings) .pf-c-tabs__link.pf-m-current,
-:host(ak-user-settings) .pf-c-tabs__item.pf-m-current .pf-c-tabs__button {
+.pf-c-tabs.pf-m-vertical .pf-c-tabs__item.pf-m-current .pf-c-tabs__link {
     color: white !important;
     background: rgba(255, 255, 255, 0.12) !important;
     border-radius: 10px !important;
-}
-
-:host(ak-user-settings) .pf-c-tabs__item.pf-m-current::after {
-    border-bottom-color: #667eea !important;
-    border-bottom-width: 3px !important;
 }
 
 /* Sidebar */
