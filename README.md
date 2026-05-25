@@ -1,4 +1,4 @@
-# Authentik Glassmorphism Theme
+# Authentik Glassy Theme
 
 A frosted-glass CSS theme for [Authentik](https://goauthentik.io/).
 
