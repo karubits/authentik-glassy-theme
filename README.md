@@ -121,6 +121,16 @@ Key points:
 - Admin interface styles are excluded via
   `:host(ak-interface-admin)` resets.
 
+## AI Disclosure
+
+This theme was developed with assistance from [Hermes](https://github.com/nousresearch/hermes)
+and Claude (claude-opus-4-6). AI was used to debug Shadow DOM CSS selector
+issues, convert selectors for Authentik 2026.x compatibility, scope styles
+away from the admin interface, and write documentation.
+
+A full AI-generated [security review](security-review-260526.md) of the
+CSS and documentation has been conducted.
+
 ## Contributing
 
 Found a bug or have a fix for a new Authentik version? Contributions are welcome.
