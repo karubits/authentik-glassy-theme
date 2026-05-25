@@ -1,9 +1,15 @@
-/* ===== AUTHENTIK GLASSMORPHISM THEME - V1.1 (Badge Fix) ===== */
+/* ===== AUTHENTIK GLASSMORPHISM THEME - v1.2 ===== */
 
 /* 
+   Fork by karubits - https://github.com/karubits
+   Based on VULGA01/Authentik-Login-theme-Glassmorphism
+   https://github.com/VULGA01/Authentik-Login-theme-Glassmorphism
+
+   Reworked for Authentik's Shadow DOM architecture (adoptedStyleSheets).
+   Confirmed working on Authentik 2026.2.x and 2026.5.x.
+
    This theme implements a modern glassmorphism look for Authentik.
    It overrides standard PatternFly and Authentik components.
-   Please upload this file in the Authentik Admin Interface -> Customization -> Blueprints/Files.
 */
 
 /* ===== EASY CUSTOMIZATION ===== */
