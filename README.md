@@ -1,12 +1,40 @@
 # Authentik Glassy Theme
 
+*Keeping your login pages classy — because they're glassy.*
+
 A frosted-glass CSS theme for [Authentik](https://goauthentik.io/).
 
 Fork by [karubits](https://github.com/karubits), based on
 [VULGA01/Authentik-Login-theme-Glassmorphism](https://github.com/VULGA01/Authentik-Login-theme-Glassmorphism).
 Reworked for Authentik's Shadow DOM architecture (`adoptedStyleSheets`).
 
+This fork resolves upstream issue
+[VULGA01/Authentik-Login-theme-Glassmorphism#5 — Broken in 2025.12.0](https://github.com/VULGA01/Authentik-Login-theme-Glassmorphism/issues/5),
+where Authentik's switch to Shadow DOM web components broke the original
+theme's selectors. The fork was [announced in the issue thread](https://github.com/VULGA01/Authentik-Login-theme-Glassmorphism/issues/5#issuecomment-4537506840).
+
 **Confirmed working on Authentik 2026.2.x and 2026.5.x.**
+
+## Changes from upstream
+
+The original theme doesn't work out of the box on Authentik 2026.x because
+the UI moved to Shadow DOM with `adoptedStyleSheets`. Most of the CSS
+selectors silently fail since elements like `.pf-c-login__container` no
+longer exist and `.pf-c-login` is now the host element rather than an
+inner element. This fork rewrites the selectors to work with the new
+architecture.
+
+Main changes:
+
+- Converted `.pf-c-login .pf-c-login__main` to `:host(.pf-c-login) .pf-c-login__main` for Shadow DOM
+- Merged glass container styling onto `.pf-c-login__main` since `.pf-c-login__container` no longer exists
+- Added document level `body/html` background for login flows (no `.pf-c-page` element on login pages)
+- Added CSS variable fallback so the wallpaper shows on the dashboard too, not just login flows
+- Fixed invalid CSS `background` shorthand that browsers silently dropped
+- Preserved Authentik's native CSS Grid layout instead of overriding with flex
+- Scoped button, input, and card styles away from the admin interface
+- Fixed skip-to-content accessibility button getting styled as a login button
+- Removed orphaned CSS properties that caused parse errors
 
 ## What it looks like
 
