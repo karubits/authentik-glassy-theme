@@ -2334,3 +2334,29 @@ ak-app-icon::part(icon image) {
         max-height: 40px !important;
     }
 }
+
+/* ========================================= */
+/* === MODAL DIALOGS (New Token, etc.) ===== */
+/* ========================================= */
+
+/* Modals lost their surface: --pf-global--BackgroundColor--100 is forced
+   transparent in the interface hosts (dashboard transparency fix) and
+   PatternFly modal boxes derive their background from it, so the page
+   behind bled through. Give modals their own opaque glassy surface. */
+.pf-c-modal-box {
+    background: rgba(18, 20, 28, 0.95) !important;
+    backdrop-filter: blur(30px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(130%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Dim and blur the page behind the modal so it reads as a separate layer */
+.pf-c-backdrop {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
